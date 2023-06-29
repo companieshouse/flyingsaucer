@@ -1,3 +1,6 @@
+layout ?= default
+target_dir ?= target
+
 .PHONY: all
 all: build
 
@@ -16,17 +19,24 @@ test: test-unit
 test-unit:
 	mvn test
 
-.PHONY: package
-package:
+.PHONY: set-version
+set-version:
 ifndef version
 	$(error No version given. Aborting)
 endif
 	$(info Packaging version: $(version))
 	mvn versions:set -DnewVersion=$(version) -DgenerateBackupPoms=false
+
+.PHONY: package
+package: set-version
 	mvn package -DskipTests=true
 
 .PHONY: dist
 dist: clean package
+
+.PHONY: local-deploy
+local-deploy: set-version clean
+	mvn deploy -U  -DskipTests=true -DaltDeploymentRepository=$(id)::$(layout)::file://$(target_dir)
 
 .PHONY: publish
 publish:
