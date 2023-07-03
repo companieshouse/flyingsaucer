@@ -1,5 +1,6 @@
-layout ?= default
+layout     ?= default
 target_dir ?= target
+id         ?= ch-id
 
 .PHONY: all
 all: build
