@@ -3,6 +3,12 @@ Flying Saucer
 http://code.google.com/p/flying-saucer/
 Please see project website for links to git, mailing lists, issue tracker, etc.
 
+RELEASES
+--------
+Our forked repo had 2 releases and they were tagged as (`v1.0.0-rc1` and `v1.0.0-rc2`) until the service was built in Jenkins.
+The original repo instead had releases tagged as `9.x.x`, with [9.2.21](https://github.com/flyingsaucerproject/flyingsaucer/releases/tag/v9.1.21) being the last one at the time we started migrating the build from Jenkins to Concourse.
+In Concourse we started naming the releases as `10.x.x` and `11.x.x` until the pipeline proved to be stable.
+The first official stable release was then tagged as `12.0.0` and `10.x.x` and `11.x.x` were left as the intermediate attempts.
 
 OVERVIEW
 --------
