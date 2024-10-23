@@ -462,7 +462,7 @@ public class ITextFontResolver implements FontResolver {
             addZapfDingbats(result);
 
             // Try and load the iTextAsian fonts
-            if(ITextFontResolver.class.getClassLoader().getResource("com/lowagie/text/pdf/fonts/cjkfonts.properties") != null) {
+            if(ITextFontResolver.class.getClassLoader().getResource("com/itextpdf/text/pdf/fonts/cjkfonts.properties") != null) {
                 addCJKFonts(result);
             }
         } catch (DocumentException e) {

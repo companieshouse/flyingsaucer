@@ -17,7 +17,7 @@
  */
 
 
-import com.lowagie.text.DocumentException;
+import com.itextpdf.text.DocumentException;
 import org.xhtmlrenderer.pdf.ITextOutputDevice;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 import org.xhtmlrenderer.pdf.ITextUserAgent;
@@ -71,6 +71,8 @@ public class PDFRender {
 
             os.close();
             os = null;
+        } catch (com.itextpdf.text.DocumentException e) {
+            throw new RuntimeException(e);
         } finally {
             if (os != null) {
                 try {

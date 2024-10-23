@@ -19,8 +19,8 @@
  */
 package org.xhtmlrenderer.pdf;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.*;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.*;
 import org.w3c.dom.Element;
 import org.xhtmlrenderer.css.parser.FSColor;
 import org.xhtmlrenderer.layout.LayoutContext;
@@ -28,7 +28,7 @@ import org.xhtmlrenderer.render.BlockBox;
 import org.xhtmlrenderer.render.RenderingContext;
 import org.xhtmlrenderer.util.*;
 
-import com.lowagie.text.Rectangle;
+import com.itextpdf.text.Rectangle;
 
 import java.io.IOException;
 

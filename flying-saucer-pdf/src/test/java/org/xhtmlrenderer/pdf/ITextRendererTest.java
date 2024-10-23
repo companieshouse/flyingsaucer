@@ -11,8 +11,8 @@ import org.w3c.dom.Document;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 import org.xhtmlrenderer.resource.FSEntityResolver;
 
-import com.lowagie.text.pdf.PdfWriter;
-import com.lowagie.text.pdf.PdfXConformanceException;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.PdfXConformanceException;
 
 import junit.framework.TestCase;
 
@@ -36,7 +36,7 @@ public class ITextRendererTest extends TestCase {
 	
 	public void testCreatePdfAConformanceNoFontsEmbedded() throws Exception {
 		try {
-			renderer.setPDFXConformance(PdfWriter.PDFA1A);
+			renderer.setPDFXConformance(PdfWriter.PDFX1A2001);
 			renderer.setColourSpaceProfile(TEST_COLOUR_PROFILE);
 			createPdf(TEST_HTML_FILE);
 			fail();
@@ -47,7 +47,7 @@ public class ITextRendererTest extends TestCase {
 
 	public void testCreatePdfAConformanceNoColourProfileSet() {
 		try {
-			renderer.setPDFXConformance(PdfWriter.PDFA1A);
+			renderer.setPDFXConformance(PdfWriter.PDFX1A2001);
 			createPdf(TEST_HTML_FILE);
 			fail();
 		} catch (Exception e) {

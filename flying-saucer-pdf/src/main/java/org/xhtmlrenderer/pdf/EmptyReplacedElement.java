@@ -1,9 +1,8 @@
 package org.xhtmlrenderer.pdf;
 
-import com.lowagie.text.pdf.PdfAcroForm;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfFormField;
-import com.lowagie.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.PdfAcroForm;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfWriter;
 import org.w3c.dom.Element;
 import org.xhtmlrenderer.layout.LayoutContext;
 import org.xhtmlrenderer.render.BlockBox;

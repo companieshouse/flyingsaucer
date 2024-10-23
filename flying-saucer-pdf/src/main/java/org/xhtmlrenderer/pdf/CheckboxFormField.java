@@ -22,9 +22,16 @@ package org.xhtmlrenderer.pdf;
 import java.awt.Color;
 import java.io.IOException;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.*;
+
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.BaseField;
+import com.itextpdf.text.pdf.PdfBorderDictionary;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfFormField;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.RadioCheckField;
 import org.w3c.dom.Element;
 import org.xhtmlrenderer.layout.LayoutContext;
 import org.xhtmlrenderer.render.BlockBox;
@@ -61,7 +68,7 @@ public class CheckboxFormField extends AbstractFormField
     field.setCheckType(RadioCheckField.TYPE_CHECK);
     field.setBorderStyle(PdfBorderDictionary.STYLE_SOLID);
     //TODO Consider if we can get some more correct color
-    field.setBorderColor(Color.black);
+    field.setBorderColor(BaseColor.BLACK);
 
     field.setBorderWidth(BaseField.BORDER_WIDTH_THIN);
 

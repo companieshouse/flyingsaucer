@@ -2,7 +2,7 @@ define. fs Flying Saucer
 
 define. css21 "CSS 2.1 Specification":http://www.w3.org/TR/CSS21/
 
-define. itext "iText":http://www.lowagie.com/iText/
+define. itext "iText":http://www.itextpdf.com/iText/
 
 define. itext.jar iText-2.0.8.jar
 
